@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Projects – Egemen Keleş</title>
+    <meta name="description" content="Personal portfolio and project showcase of Egemen Keleş.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header>
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="main-content">
+    <section class="intro-section">
+        <h1>My Projects</h1>
+        <p>Add new projects to the portfolio using the form below.</p>
+    </section>
+
+    <div class="form-section">
+        <form id="project-form" novalidate>
+            <fieldset>
+                <legend>Add a New Project</legend>
+
+                <div class="form-group">
+                    <label for="proj-name">Project Name (Text)</label>
+                    <input type="text" id="proj-name" name="proj-name" required aria-describedby="name-error">
+                    <span id="name-error" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="proj-url">Project URL (URL)</label>
+                    <input type="url" id="proj-url" name="proj-url" placeholder="https://github.com/..." required aria-describedby="url-error">
+                    <span id="url-error" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="proj-img">Thumbnail URL (URL)</label>
+                    <input type="url" id="proj-img" name="proj-img" placeholder="https://example.com/image.jpg" required aria-describedby="img-error">
+                    <span id="img-error" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="proj-date">Completion Date (Date)</label>
+                    <input type="date" id="proj-date" name="proj-date" required aria-describedby="date-error">
+                    <span id="date-error" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="proj-tech">Primary Technology (Select)</label>
+                    <select id="proj-tech" name="proj-tech" required aria-describedby="tech-error">
+                        <option value="">-- Choose Technology --</option>
+                        <option value="Java">Java</option>
+                        <option value="React / Node.js">React / Node.js</option>
+                        <option value="C / C++">C / C++</option>
+                        <option value="IoT / Hardware">IoT / Hardware</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span id="tech-error" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="proj-desc">Description (Textarea)</label>
+                    <textarea id="proj-desc" name="proj-desc" rows="4" required aria-describedby="desc-error"></textarea>
+                    <span id="desc-error" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Add Project</button>
+                    <button type="reset" class="btn-secondary">Reset Form</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <section class="table-section">
+        <h2>Project Repository</h2>
+        <div class="table-wrapper" tabindex="0" role="region" aria-label="Scrollable project table">
+            <table id="projects-table">
+                <caption>A list of submitted technical projects and their details.</caption>
+                <thead>
+                <tr>
+                    <th scope="col">Preview</th>
+                    <th scope="col">Project Name</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Technology</th>
+                    <th scope="col">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
